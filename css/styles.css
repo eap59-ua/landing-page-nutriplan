@@ -1,0 +1,307 @@
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+/* Efectos de hover */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Iconos de características */
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #8BC34A 0%, #29B6F6 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.highlight-icon {
+    background: linear-gradient(135deg, #8BC34A 20%, #FF5722 100%);
+    box-shadow: 0 8px 20px rgba(139, 195, 74, 0.3);
+}
+
+/* Mockup de teléfono */
+.phone-mockup {
+    width: 280px;
+    height: 570px;
+    background-color: #000;
+    border-radius: 40px;
+    padding: 10px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.phone-mockup::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 30px;
+    background-color: #000;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 1;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* Carrusel de capturas */
+.app-screenshots-carousel {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.screenshot-container {
+    text-align: center;
+    max-width: 300px;
+}
+
+.screenshot-description {
+    margin-top: 20px;
+}
+
+.carousel-dots {
+    margin: 0 15px;
+}
+
+.carousel-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: #8BC34A;
+    width: 12px;
+    height: 12px;
+}
+
+.carousel-button {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #8BC34A;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: #8BC34A;
+    color: white;
+}
+
+/* Tarjetas de testimonios */
+.testimonial-card {
+    background: linear-gradient(to bottom right, white, #F5F7FA);
+    box-shadow: 0 10px 30px rgba(41, 182, 246, 0.1);
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(41, 182, 246, 0.15);
+}
+
+.testimonial-card::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 60px;
+    color: #8BC34A;
+    opacity: 0.1;
+    font-family: serif;
+}
+
+/* Sección de preguntas frecuentes */
+.faq-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 16px 20px;
+    text-align: left;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    padding: 0 20px 16px;
+    max-height: 1000px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+/* Demo del chat con IA */
+.ai-chat-demo {
+    width: 100%;
+    max-width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    padding: 15px;
+    background-color: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+}
+
+.bot-message {
+    background-color: #f3f4f6;
+    align-self: flex-start;
+    border-top-left-radius: 5px;
+}
+
+.user-message {
+    background-color: #8BC34A;
+    color: white;
+    align-self: flex-end;
+    border-top-right-radius: 5px;
+}
+
+.chat-input {
+    padding: 10px;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+}
+
+.chat-input-field {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    outline: none;
+}
+
+.chat-send-button {
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    border-radius: 50%;
+    background-color: #8BC34A;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-send-button:hover {
+    background-color: #7cb342;
+}
+
+/* Menú móvil */
+.mobile-menu {
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.mobile-menu.active {
+    max-height: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .app-screenshots-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .screenshot-container {
+        max-width: 100%;
+    }
+    
+    .ai-chat-demo {
+        margin-top: 30px;
+    }
+}

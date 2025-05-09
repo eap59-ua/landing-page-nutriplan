@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriPlan - Nutrición Personalizada con IA</title>
+    <meta name="description" content="Transforma tu salud con NutriPlan, tu asistente de nutrición personalizado con inteligencia artificial.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eap59-ua.github.io/landing-page-nutriplan/">
+    <meta property="og:title" content="NutriPlan - Nutrición Personalizada con IA">
+    <meta property="og:description" content="Planificación nutricional inteligente adaptada a tus necesidades y objetivos.">
+    <meta property="og:image" content="img/social-preview.jpg">
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="img/logo.png" alt="NutriPlan Logo" class="h-12 mr-3">
+                <span class="text-xl font-bold text-gray-800">NutriPlan</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#features" class="text-gray-600 hover:text-green-500 transition">Características</a>
+                <a href="#screenshots" class="text-gray-600 hover:text-green-500 transition">App</a>
+                <a href="#ai-assistant" class="text-gray-600 hover:text-green-500 transition">IA Nutricional</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-green-500 transition">Testimonios</a>
+                <a href="#about" class="text-gray-600 hover:text-green-500 transition">Nosotros</a>
+            </div>
+            <button class="md:hidden text-gray-600 mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile menu (hidden by default) -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="container mx-auto px-4 py-3 space-y-2">
+                <a href="#features" class="block text-gray-600 hover:text-green-500 transition">Características</a>
+                <a href="#screenshots" class="block text-gray-600 hover:text-green-500 transition">App</a>
+                <a href="#ai-assistant" class="block text-gray-600 hover:text-green-500 transition">IA Nutricional</a>
+                <a href="#testimonials" class="block text-gray-600 hover:text-green-500 transition">Testimonios</a>
+                <a href="#about" class="block text-gray-600 hover:text-green-500 transition">Nosotros</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-br from-green-50 to-blue-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Transforma tu salud con <span class="text-green-500">NutriPlan</span></h1>
+                <p class="text-xl text-gray-600 mb-8">Tu asistente de nutrición personalizado con inteligencia artificial. Planes adaptados a tus necesidades y objetivos.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition shadow-lg hover-scale">
+                        <i class="fab fa-apple mr-2"></i> Descargar en App Store
+                    </button>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition shadow-lg hover-scale">
+                        <i class="fab fa-google-play mr-2"></i> Descargar en Play Store
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center fade-in delay-1">
+                <div class="phone-mockup">
+                    <img src="img/screenshot1.png" alt="NutriPlan App Mockup" class="phone-screen">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Nutrición inteligente a tu alcance</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Descubre cómo nuestra tecnología revoluciona tu relación con la comida</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover-scale transition fade-in delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Planificación de comidas</h3>
+                    <p class="text-gray-600">Recibe planes de comidas semanales adaptados a tus preferencias, alergias y objetivos nutricionales.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover-scale transition fade-in delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Análisis nutricional</h3>
+                    <p class="text-gray-600">Conoce el desglose completo de macronutrientes y micronutrientes de cada comida.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover-scale transition fade-in delay-3">
+                    <div class="feature-icon highlight-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Asistente con IA</h3>
+                    <p class="text-gray-600">Nuestro asistente inteligente aprende de tus hábitos y te ofrece recomendaciones cada vez más personalizadas.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover-scale transition fade-in delay-1">
+                    <div class="feature-icon highlight-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Reconocimiento de alimentos</h3>
+                    <p class="text-gray-600">Simplemente toma una foto y nuestra IA identificará los alimentos y calculará su información nutricional.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover-scale transition fade-in delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Objetivos personalizados</h3>
+                    <p class="text-gray-600">Ya sea perder peso, ganar músculo o mantenerte saludable, te ayudamos a establecer y alcanzar tus metas.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-gray-50 p-8 rounded-xl hover-scale transition fade-in delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Seguimiento de progreso</h3>
+                    <p class="text-gray-600">Visualiza tu evolución con gráficos detallados y recibe insights para mejorar continuamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Screenshots -->
+    <section id="screenshots" class="py-16 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Así funciona NutriPlan</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Una experiencia intuitiva diseñada para ayudarte a comer mejor</p>
+            </div>
+            
+            <div class="app-screenshots-carousel">
+                <div class="screenshot-container fade-in delay-1">
+                    <div class="phone-mockup">
+                        <img src="img/screenshot1.png" alt="Pantalla de inicio de NutriPlan" class="phone-screen">
+                    </div>
+                    <div class="screenshot-description">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Inicio de sesión sencillo</h3>
+                        <p class="text-gray-600">Accede rápidamente a tu cuenta y comienza a planificar tus comidas.</p>
+                    </div>
+                </div>
+                
+                <div class="screenshot-container fade-in delay-2">
+                    <div class="phone-mockup">
+                        <img src="img/screenshot2.png" alt="Planificación de comidas" class="phone-screen">
+                    </div>
+                    <div class="screenshot-description">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Planificación personalizada</h3>
+                        <p class="text-gray-600">Crea planes de comidas adaptados a tus necesidades específicas.</p>
+                    </div>
+                </div>
+                
+                <div class="screenshot-container fade-in delay-3">
+                    <div class="phone-mockup">
+                        <img src="img/screenshot3.png" alt="Seguimiento nutricional" class="phone-screen">
+                    </div>
+                    <div class="screenshot-description">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Seguimiento semanal</h3>
+                        <p class="text-gray-600">Visualiza tus comidas programadas y mantén el control de tu nutrición.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="carousel-button prev-button">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-dots inline-flex space-x-2">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                </div>
+                <button class="carousel-button next-button">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI Assistant Section -->
+    <section id="ai-assistant" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 pr-0 md:pr-8 fade-in">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Asistente Nutricional <span class="text-green-500">Inteligente</span></h2>
+                    <p class="text-xl text-gray-600 mb-6">NutriPlan incorpora un asistente impulsado por IA que te guía en cada paso de tu viaje nutricional.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-green-500"></i>
+                            </div>
+                            <p class="text-gray-700">Responde a todas tus preguntas sobre nutrición y alimentación saludable</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-green-500"></i>
+                            </div>
+                            <p class="text-gray-700">Sugiere alternativas cuando no dispones de ciertos ingredientes</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-green-500"></i>
+                            </div>
+                            <p class="text-gray-700">Te ofrece consejos personalizados basados en tus preferencias y objetivos</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-2 rounded-full mr-3 mt-1">
+                                <i class="fas fa-check text-green-500"></i>
+                            </div>
+                            <p class="text-gray-700">Aprende continuamente para brindarte recomendaciones cada vez más precisas</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 flex justify-center fade-in delay-2">
+                    <div class="ai-chat-demo">
+                        <div class="chat-header">
+                            <div class="flex items-center">
+                                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white mr-3">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <span class="font-semibold">NutriAI</span>
+                            </div>
+                        </div>
+                        <div class="chat-messages">
+                            <div class="chat-message bot-message">
+                                Hola, soy NutriAI. ¿En qué puedo ayudarte hoy?
+                            </div>
+                            <div class="chat-message user-message">
+                                ¿Qué puedo comer para aumentar mi proteína diaria?
+                            </div>
+                            <div class="chat-message bot-message">
+                                <p>¡Excelente pregunta! Aquí tienes algunas opciones ricas en proteínas:</p>
+                                <ul class="list-disc ml-5 mt-2">
+                                    <li>Pechuga de pollo (31g por 100g)</li>
+                                    <li>Atún (30g por 100g)</li>
+                                    <li>Lentejas (9g por 100g cocidas)</li>
+                                    <li>Queso cottage (11g por 100g)</li>
+                                    <li>Tofu (8g por 100g)</li>
+                                </ul>
+                                <p class="mt-2">¿Tienes alguna preferencia o restricción dietética?</p>
+                            </div>
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" placeholder="Escribe tu pregunta..." class="chat-input-field">
+                            <button class="chat-send-button">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Lo que dicen nuestros usuarios</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Historias reales de personas que transformaron su salud</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 fade-in delay-1">
+                    <div class="flex items-center mb-4">
+                        <img src="img/testimonial1.jpg" alt="Laura G." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Laura G.</h4>
+                            <p class="text-gray-600 text-sm">Perdió 12 kg en 4 meses</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"NutriPlan cambió completamente mi relación con la comida. Por primera vez en mi vida, tengo un plan que realmente disfruto y que me ha ayudado a alcanzar mis objetivos sin sentir que estoy a dieta."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 fade-in delay-2">
+                    <div class="flex items-center mb-4">
+                        <img src="img/testimonial2.jpg" alt="Carlos M." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carlos M.</h4>
+                            <p class="text-gray-600 text-sm">Atleta amateur</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Como deportista, necesitaba optimizar mi nutrición para mejorar mi rendimiento. La IA de NutriPlan ha sido increíblemente precisa en sus recomendaciones, ayudándome a ganar músculo y recuperarme más rápido."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 fade-in delay-3">
+                    <div class="flex items-center mb-4">
+                        <img src="img/testimonial3.jpg" alt="Ana L." class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ana L.</h4>
+                            <p class="text-gray-600 text-sm">Madre de dos niños</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"Con lo ocupada que estoy, nunca tenía tiempo para planificar comidas saludables. Ahora NutriPlan lo hace por mí, incluso adaptándose a las alergias de mi hijo menor. ¡Ha sido un cambio radical para toda la familia!"</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Preguntas frecuentes</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Respuestas a tus dudas sobre NutriPlan</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="faq-item fade-in delay-1">
+                    <button class="faq-question">
+                        <span class="text-lg font-semibold text-gray-800">¿Cómo funciona el reconocimiento de alimentos por foto?</span>
+                        <i class="fas fa-chevron-down text-green-500"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="text-gray-600">Nuestra tecnología de IA analiza la imagen del alimento que fotografías, identifica los ingredientes y consulta nuestra extensa base de datos de nutrición para proporcionar información precisa sobre calorías, macronutrientes y micronutrientes. Todo esto en cuestión de segundos.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-2">
+                    <button class="faq-question">
+                        <span class="text-lg font-semibold text-gray-800">¿NutriPlan se adapta a dietas especiales?</span>
+                        <i class="fas fa-chevron-down text-green-500"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="text-gray-600">¡Absolutamente! NutriPlan es compatible con diversos estilos de alimentación, incluyendo vegana, vegetariana, keto, paleo, sin gluten, y muchas más. Durante la configuración inicial, indicarás tus preferencias dietéticas y la aplicación se adaptará en consecuencia.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-3">
+                    <button class="faq-question">
+                        <span class="text-lg font-semibold text-gray-800">¿Necesito una suscripción para usar todas las funciones?</span>
+                        <i class="fas fa-chevron-down text-green-500"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="text-gray-600">NutriPlan ofrece una versión gratuita con funcionalidades básicas, mientras que la versión premium desbloquea todas las características, incluyendo planes personalizados ilimitados, asistente IA avanzado y análisis nutricional detallado. Puedes probar la versión premium gratuitamente durante 14 días.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-4">
+                    <button class="faq-question">
+                        <span class="text-lg font-semibold text-gray-800">¿Quién desarrolla los planes nutricionales?</span>
+                        <i class="fas fa-chevron-down text-green-500"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="text-gray-600">Nuestros planes son generados por un sistema de IA que ha sido entrenado con datos de nutricionistas certificados. La base de conocimiento de NutriPlan incluye investigaciones nutricionales actualizadas y está supervisada por nuestro equipo de profesionales de la salud para garantizar recomendaciones precisas y saludables.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-green-500 to-blue-500 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 fade-in">¿Listo para transformar tu nutrición?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto fade-in delay-1">Descarga NutriPlan hoy y comienza tu viaje hacia una vida más saludable</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 fade-in delay-2">
+                <button class="bg-white text-green-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-full transition shadow-lg hover-scale">
+                    <i class="fab fa-apple mr-2"></i> App Store
+                </button>
+                <button class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-full transition shadow-lg hover-scale">
+                    <i class="fab fa-google-play mr-2"></i> Play Store
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 fade-in">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Sobre <span class="text-green-500">NutriTech</span> Solutions</h2>
+                    <p class="text-gray-600 mb-4">Somos un equipo de nutricionistas, ingenieros y expertos en IA apasionados por mejorar la salud a través de la tecnología.</p>
+                    <p class="text-gray-600">Fundada en 2020, NutriTech Solutions tiene como misión hacer que la nutrición personalizada sea accesible para todos, eliminando las conjeturas y proporcionando recomendaciones basadas en ciencia.</p>
+                </div>
+                <div class="md:w-1/2 flex justify-center fade-in delay-1">
+                    <div class="bg-white p-8 rounded-xl shadow-lg max-w-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Nuestros valores</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-full mr-3">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <span class="text-gray-700">Salud primero: siempre anteponemos el bienestar de nuestros usuarios</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 text-blue-600 p-2 rounded-full mr-3">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <span class="text-gray-700">Innovación constante: buscamos siempre mejorar nuestra tecnología</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-green-100 text-green-600 p-2 rounded-full mr-3">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <span class="text-gray-700">Privacidad garantizada: tus datos están seguros con nosotros</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="mb-8">
+                    <div class="flex items-center mb-4">
+                        <img src="img/logo-white.png" alt="NutriPlan Logo" class="h-10 mr-3">
+                        <span class="text-xl font-bold">NutriPlan</span>
+                    </div>
+                    <p class="text-gray-400">La aplicación de nutrición inteligente que se adapta a ti.</p>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-lg font-bold mb-4">Enlaces</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Características</a></li>
+                        <li><a href="#screenshots" class="text-gray-400 hover:text-white transition">App</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonios</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-lg font-bold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de privacidad</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cookies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-lg font-bold mb-4">Contacto</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">hola@nutriplan.app</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+34 123 456 789</span>
+                        </li>
+                    </ul>
+                    <div class="mt-4 flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 NutriTech Solutions. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
