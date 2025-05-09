@@ -10,9 +10,9 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="css/styles.css">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -20,351 +20,56 @@
     <meta property="og:title" content="NutriPlan - Nutrición Personalizada con IA">
     <meta property="og:description" content="Planificación nutricional inteligente adaptada a tus necesidades y objetivos.">
     <meta property="og:image" content="img/social-preview.jpg">
+    <!-- Agregar en <head> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
-    /* Animaciones */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-}
-
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-.delay-4 { animation-delay: 0.8s; }
-
-/* Efectos de hover */
-.hover-scale {
-    transition: transform 0.3s ease;
-}
-
-.hover-scale:hover {
-    transform: scale(1.05);
-}
-
-/* Iconos de características */
-.feature-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #8BC34A 0%, #29B6F6 100%);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.highlight-icon {
-    background: linear-gradient(135deg, #8BC34A 20%, #FF5722 100%);
-    box-shadow: 0 8px 20px rgba(139, 195, 74, 0.3);
-}
-
-/* Mockup de teléfono */
-.phone-mockup {
-    width: 280px;
-    height: 570px;
-    background-color: #000;
-    border-radius: 40px;
-    padding: 10px;
-    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    position: relative;
-    overflow: hidden;
-}
-
-.phone-mockup::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 30px;
-    background-color: #000;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    z-index: 1;
-}
-
-.phone-screen {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 30px;
-}
-
-/* Carrusel de capturas */
-.app-screenshots-carousel {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.screenshot-container {
-    text-align: center;
-    max-width: 300px;
-}
-
-.screenshot-description {
-    margin-top: 20px;
-}
-
-.carousel-dots {
-    margin: 0 15px;
-}
-
-.carousel-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #e2e8f0;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.carousel-dot.active {
-    background-color: #8BC34A;
-    width: 12px;
-    height: 12px;
-}
-
-.carousel-button {
-    background-color: white;
-    border: 1px solid #e2e8f0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #8BC34A;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.carousel-button:hover {
-    background-color: #8BC34A;
-    color: white;
-}
-
-/* Tarjetas de testimonios */
-.testimonial-card {
-    background: linear-gradient(to bottom right, white, #F5F7FA);
-    box-shadow: 0 10px 30px rgba(41, 182, 246, 0.1);
-    border-radius: 15px;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(41, 182, 246, 0.15);
-}
-
-.testimonial-card::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 60px;
-    color: #8BC34A;
-    opacity: 0.1;
-    font-family: serif;
-}
-
-/* Sección de preguntas frecuentes */
-.faq-item {
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-}
-
-.faq-item:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-.faq-question {
-    width: 100%;
-    padding: 16px 20px;
-    text-align: left;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.faq-answer {
-    padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.faq-item.active .faq-answer {
-    padding: 0 20px 16px;
-    max-height: 1000px;
-}
-
-.faq-item.active .faq-question i {
-    transform: rotate(180deg);
-}
-
-/* Demo del chat con IA */
-.ai-chat-demo {
-    width: 100%;
-    max-width: 350px;
-    height: 500px;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    overflow: hidden;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-}
-
-.chat-header {
-    padding: 15px;
-    background-color: #f9fafb;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.chat-messages {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.chat-message {
-    padding: 10px 15px;
-    border-radius: 15px;
-    max-width: 80%;
-}
-
-.bot-message {
-    background-color: #f3f4f6;
-    align-self: flex-start;
-    border-top-left-radius: 5px;
-}
-
-.user-message {
-    background-color: #8BC34A;
-    color: white;
-    align-self: flex-end;
-    border-top-right-radius: 5px;
-}
-
-.chat-input {
-    padding: 10px;
-    border-top: 1px solid #e5e7eb;
-    display: flex;
-}
-
-.chat-input-field {
-    flex: 1;
-    padding: 10px 15px;
-    border: 1px solid #e5e7eb;
-    border-radius: 20px;
-    outline: none;
-}
-
-.chat-send-button {
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-    border-radius: 50%;
-    background-color: #8BC34A;
-    color: white;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.chat-send-button:hover {
-    background-color: #7cb342;
-}
-
-/* Menú móvil */
-.mobile-menu {
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    max-height: 0;
-    overflow: hidden;
-}
-
-.mobile-menu.active {
-    max-height: 300px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-/* Media queries */
-@media (max-width: 768px) {
-    .app-screenshots-carousel {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .screenshot-container {
-        max-width: 100%;
-    }
-    
-    .ai-chat-demo {
-        margin-top: 30px;
-    }
-}  
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Poppins', sans-serif;
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Navbar -->
-    <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="img/logo.png" alt="NutriPlan Logo" class="h-12 mr-3">
-                <span class="text-xl font-bold text-gray-800">NutriPlan</span>
+            <!-- Navbar actualizada -->
+        <nav class="bg-white shadow-sm py-4 sticky top-0 z-50">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <img src="img/logo-nutri.jpg" alt="NutriPlan Logo" class="h-12 mr-3">
+                    <span class="text-xl font-bold text-gray-800">NutriPlan</span>
+                </div>
+                
+                <!-- Menú desktop -->
+                <div class="hidden md:flex space-x-8">
+                    <!-- Enlaces... -->
+                </div>
+                
+                <!-- Botón móvil -->
+                <button class="md:hidden text-gray-600 mobile-menu-button">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#features" class="text-gray-600 hover:text-green-500 transition">Características</a>
-                <a href="#screenshots" class="text-gray-600 hover:text-green-500 transition">App</a>
-                <a href="#ai-assistant" class="text-gray-600 hover:text-green-500 transition">IA Nutricional</a>
-                <a href="#testimonials" class="text-gray-600 hover:text-green-500 transition">Testimonios</a>
-                <a href="#about" class="text-gray-600 hover:text-green-500 transition">Nosotros</a>
+            
+            <!-- Menú móvil (FALTANTE) -->
+            <div class="mobile-menu hidden md:hidden bg-white border-t">
+                <div class="container mx-auto px-4 py-4 space-y-3">
+                    <a href="#features" class="block py-2 text-gray-700 hover:text-green-500">Características</a>
+                    <a href="#screenshots" class="block py-2 text-gray-700 hover:text-green-500">App</a>
+                    <a href="#testimonials" class="block py-2 text-gray-700 hover:text-green-500">Testimonios</a>
+                    <a href="#about" class="block py-2 text-gray-700 hover:text-green-500">Nosotros</a>
+                </div>
             </div>
-            <button class="md:hidden text-gray-600 mobile-menu-button">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-        <!-- Mobile menu (hidden by default) -->
-        <div class="mobile-menu hidden md:hidden">
-            <div class="container mx-auto px-4 py-3 space-y-2">
-                <a href="#features" class="block text-gray-600 hover:text-green-500 transition">Características</a>
-                <a href="#screenshots" class="block text-gray-600 hover:text-green-500 transition">App</a>
-                <a href="#ai-assistant" class="block text-gray-600 hover:text-green-500 transition">IA Nutricional</a>
-                <a href="#testimonials" class="block text-gray-600 hover:text-green-500 transition">Testimonios</a>
-                <a href="#about" class="block text-gray-600 hover:text-green-500 transition">Nosotros</a>
-            </div>
-        </div>
-    </nav>
+        </nav>
 
     <!-- Hero Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-br from-green-50 to-blue-50">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 mb-12 md:mb-0 fade-in">
+    <section class="py-20 md:py-32 bg-gradient-to-br from-green-50 to-blue-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            
+            <div class="md:w-1/2 text-center md:text-left">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Transforma tu salud con <span class="text-green-500">NutriPlan</span></h1>
                 <p class="text-xl text-gray-600 mb-8">Tu asistente de nutrición personalizado con inteligencia artificial. Planes adaptados a tus necesidades y objetivos.</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
@@ -376,9 +81,11 @@
                     </button>
                 </div>
             </div>
-            <div class="md:w-1/2 flex justify-center fade-in delay-1">
-                <div class="phone-mockup">
-                    <img src="img/screenshot1.png" alt="NutriPlan App Mockup" class="phone-screen">
+            <!-- Imagen -->
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-md">
+                    <div class="absolute inset-0 bg-green-500/10 rounded-3xl transform -rotate-6"></div>
+                    <img src="img/screenshot1.png" class="relative rounded-3xl transform rotate-1 shadow-xl">
                 </div>
             </div>
         </div>
@@ -392,7 +99,7 @@
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">Descubre cómo nuestra tecnología revoluciona tu relación con la comida</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
                 <!-- Feature 1 -->
                 <div class="bg-gray-50 p-8 rounded-xl hover-scale transition fade-in delay-1">
                     <div class="feature-icon">
@@ -461,7 +168,7 @@
             <div class="app-screenshots-carousel">
                 <div class="screenshot-container fade-in delay-1">
                     <div class="phone-mockup">
-                        <img src="img/screenshot1.png" alt="Pantalla de inicio de NutriPlan" class="phone-screen">
+                        <img src="img/nutriplan-sc1.png" alt="Pantalla de inicio de NutriPlan" class="phone-screen">
                     </div>
                     <div class="screenshot-description">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">Inicio de sesión sencillo</h3>
@@ -595,7 +302,7 @@
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card p-8 fade-in delay-1">
                     <div class="flex items-center mb-4">
-                        <img src="img/testimonial1.jpg" alt="Laura G." class="w-12 h-12 rounded-full mr-4">
+                        <img src="img/testimonial2.jpg" alt="Laura G." class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">Laura G.</h4>
                             <p class="text-gray-600 text-sm">Perdió 12 kg en 4 meses</p>
@@ -614,7 +321,7 @@
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card p-8 fade-in delay-2">
                     <div class="flex items-center mb-4">
-                        <img src="img/testimonial2.jpg" alt="Carlos M." class="w-12 h-12 rounded-full mr-4">
+                        <img src="img/testimonial3.jpg" alt="Carlos M." class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">Carlos M.</h4>
                             <p class="text-gray-600 text-sm">Atleta amateur</p>
@@ -633,7 +340,7 @@
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card p-8 fade-in delay-3">
                     <div class="flex items-center mb-4">
-                        <img src="img/testimonial3.jpg" alt="Ana L." class="w-12 h-12 rounded-full mr-4">
+                        <img src="img/testimonial1.jpg" alt="Ana L." class="w-12 h-12 rounded-full mr-4">
                         <div>
                             <h4 class="font-bold text-gray-800">Ana L.</h4>
                             <p class="text-gray-600 text-sm">Madre de dos niños</p>
@@ -727,7 +434,7 @@
                 <div class="md:w-1/2 mb-8 md:mb-0 fade-in">
                     <h2 class="text-3xl font-bold text-gray-800 mb-4">Sobre <span class="text-green-500">NutriTech</span> Solutions</h2>
                     <p class="text-gray-600 mb-4">Somos un equipo de nutricionistas, ingenieros y expertos en IA apasionados por mejorar la salud a través de la tecnología.</p>
-                    <p class="text-gray-600">Fundada en 2020, NutriTech Solutions tiene como misión hacer que la nutrición personalizada sea accesible para todos, eliminando las conjeturas y proporcionando recomendaciones basadas en ciencia.</p>
+                    <p class="text-gray-600">Fundada en 2025, NutriTech Solutions tiene como misión hacer que la nutrición personalizada sea accesible para todos, eliminando las conjeturas y proporcionando recomendaciones basadas en ciencia.</p>
                 </div>
                 <div class="md:w-1/2 flex justify-center fade-in delay-1">
                     <div class="bg-white p-8 rounded-xl shadow-lg max-w-md">
@@ -759,253 +466,23 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="mb-8">
-                    <div class="flex items-center mb-4">
-                        <img src="img/logo-white.png" alt="NutriPlan Logo" class="h-10 mr-3">
-                        <span class="text-xl font-bold">NutriPlan</span>
-                    </div>
-                    <p class="text-gray-400">La aplicación de nutrición inteligente que se adapta a ti.</p>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                <div class="mb-4 md:mb-0">
+                    <img src="img/logo-nutri.jpg" alt="NutriPlan Logo" class="h-10 mx-auto md:mx-0">
                 </div>
-                
-                <div class="mb-8">
-                    <h3 class="text-lg font-bold mb-4">Enlaces</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#features" class="text-gray-400 hover:text-white transition">Características</a></li>
-                        <li><a href="#screenshots" class="text-gray-400 hover:text-white transition">App</a></li>
-                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Testimonios</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Nosotros</a></li>
-                    </ul>
-                </div>
-                
-                <div class="mb-8">
-                    <h3 class="text-lg font-bold mb-4">Legal</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Términos y condiciones</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Política de privacidad</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cookies</a></li>
-                    </ul>
-                </div>
-                
-                <div class="mb-8">
-                    <h3 class="text-lg font-bold mb-4">Contacto</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
-                            <span class="text-gray-400">hola@nutriplan.app</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-2 text-gray-400"></i>
-                            <span class="text-gray-400">+34 123 456 789</span>
-                        </li>
-                    </ul>
-                    <div class="mt-4 flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-linkedin"></i></a>
-                    </div>
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="#" class="hover:text-green-400 transition"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="hover:text-green-400 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-green-400 transition"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-                <p>© 2023 NutriTech Solutions. Todos los derechos reservados.</p>
-            </div>
+            <p class="text-gray-400 text-sm">&copy; 2025 NutriPlan. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    // Elementos fadeIn
-    const fadeElements = document.querySelectorAll('.fade-in');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = 1;
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.1 });
-    
-    fadeElements.forEach(el => {
-        observer.observe(el);
-    });
-    
-    // Menú móvil
-    const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('active');
-        });
-    }
-    
-    // Navegación suave
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            
-            const target = document.querySelector(this.getAttribute('href'));
-            
-            if (target) {
-                // Cerrar menú móvil si está abierto
-                if (mobileMenu) {
-                    mobileMenu.classList.remove('active');
-                }
-                
-                // Desplazamiento suave
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // FAQ accordion
-    const faqItems = document.querySelectorAll('.faq-item');
-    
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-        
-        if (question) {
-            question.addEventListener('click', () => {
-                // Cerrar todos los demás elementos
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                    }
-                });
-                
-                // Abrir/cerrar el elemento actual
-                item.classList.toggle('active');
-            });
-        }
-    });
-    
-    // Carrusel de capturas de pantalla
-    const screenshotContainers = document.querySelectorAll('.screenshot-container');
-    const carouselDots = document.querySelectorAll('.carousel-dot');
-    const prevButton = document.querySelector('.prev-button');
-    const nextButton = document.querySelector('.next-button');
-    
-    let currentSlide = 0;
-    
-    function showSlide(index) {
-        // Ocultar todas las capturas
-        screenshotContainers.forEach((container, i) => {
-            if (i === index) {
-                container.style.display = 'block';
-            } else {
-                container.style.display = 'none';
-            }
-        });
-        
-        // Actualizar dots
-        carouselDots.forEach((dot, i) => {
-            if (i === index) {
-                dot.classList.add('active');
-            } else {
-                dot.classList.remove('active');
-            }
-        });
-        
-        currentSlide = index;
-    }
-    
-    // Solo inicializar el carrusel si hay más de una pantalla en pantallas pequeñas
-    if (screenshotContainers.length > 1 && window.innerWidth < 768) {
-        // Mostrar solo la primera captura inicialmente en móviles
-        showSlide(0);
-        
-        // Event listeners para navegación
-        if (prevButton && nextButton) {
-            prevButton.addEventListener('click', () => {
-                let newIndex = currentSlide - 1;
-                if (newIndex < 0) newIndex = screenshotContainers.length - 1;
-                showSlide(newIndex);
-            });
-            
-            nextButton.addEventListener('click', () => {
-                let newIndex = currentSlide + 1;
-                if (newIndex >= screenshotContainers.length) newIndex = 0;
-                showSlide(newIndex);
-            });
-        }
-        
-        // Navegación con dots
-        carouselDots.forEach((dot, i) => {
-            dot.addEventListener('click', () => {
-                showSlide(i);
-            });
-        });
-    } else {
-        // En escritorio, mostrar todas las capturas
-        screenshotContainers.forEach(container => {
-            container.style.display = 'block';
-        });
-        
-        // Ocultar controles de navegación en escritorio
-        if (prevButton && nextButton) {
-            prevButton.style.display = 'none';
-            nextButton.style.display = 'none';
-        }
-    }
-    
-    // Simulación de chat
-    const chatInput = document.querySelector('.chat-input-field');
-    const chatSendButton = document.querySelector('.chat-send-button');
-    const chatMessages = document.querySelector('.chat-messages');
-    
-    if (chatInput && chatSendButton && chatMessages) {
-        const handleChat = () => {
-            const message = chatInput.value.trim();
-            if (message) {
-                // Añadir mensaje del usuario
-                const userMsg = document.createElement('div');
-                userMsg.className = 'chat-message user-message';
-                userMsg.textContent = message;
-                chatMessages.appendChild(userMsg);
-                
-                // Limpiar input
-                chatInput.value = '';
-                
-                // Auto scroll
-                chatMessages.scrollTop = chatMessages.scrollHeight;
-                
-                // Simular respuesta automática
-                setTimeout(() => {
-                    const botMsg = document.createElement('div');
-                    botMsg.className = 'chat-message bot-message';
-                    
-                    // Respuesta simulada basada en palabras clave
-                    if (message.toLowerCase().includes('receta') || message.toLowerCase().includes('comida')) {
-                        botMsg.innerHTML = 'Aquí tienes algunas recetas saludables que podrían interesarte:<br><br>1. Bowl de quinoa con verduras asadas y aguacate<br>2. Ensalada de lentejas con atún y huevo duro<br>3. Wrap de pollo con espinacas y hummus';
-                    } else if (message.toLowerCase().includes('ejercicio') || message.toLowerCase().includes('entrenar')) {
-                        botMsg.innerHTML = 'El ejercicio es un complemento ideal para una buena nutrición. Te recomiendo combinar actividad cardiovascular (30 min, 3-4 veces por semana) con entrenamiento de fuerza (2-3 veces por semana) para obtener mejores resultados.';
-                    } else {
-                        botMsg.innerHTML = '¡Gracias por tu pregunta! Nuestro asistente IA ha recibido tu consulta. En la versión completa de NutriPlan, recibirías una respuesta personalizada basada en tu perfil nutricional.';
-                    }
-                    
-                    chatMessages.appendChild(botMsg);
-                    chatMessages.scrollTop = chatMessages.scrollHeight;
-                }, 1000);
-            }
-        };
-        
-        chatSendButton.addEventListener('click', handleChat);
-        
-        chatInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                handleChat();
-            }
-        });
-    }
-});  
-    </script>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
 </body>
 </html>

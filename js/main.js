@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('active');
         });
     }
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (target) {
                 // Cerrar menú móvil si está abierto
                 if (mobileMenu) {
+                    mobileMenu.classList.add('hidden');
                     mobileMenu.classList.remove('active');
                 }
                 

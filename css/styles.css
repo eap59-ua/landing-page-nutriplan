@@ -289,6 +289,42 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+/* Agregar en styles.css */
+.phone-mockup {
+    position: relative;
+    z-index: 10;
+}
+
+.ai-chat-demo {
+    z-index: 20;
+    position: relative;
+}
+.app-screenshots-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem;
+    padding-bottom: 1rem; /* Espacio para scrollbar */
+}
+
+.screenshot-container {
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+    width: 80%;
+    max-width: 300px;
+}
+
+/* Ocultar scrollbar en desktop */
+@media (min-width: 768px) {
+    .app-screenshots-carousel {
+        overflow-x: hidden;
+        justify-content: center;
+    }
+}
+.testimonial-card {
+    z-index: 5;
+    position: relative;
+}
 
 /* Media queries */
 @media (max-width: 768px) {
